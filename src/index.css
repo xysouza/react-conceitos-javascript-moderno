@@ -1,11 +1,17 @@
+
+/* === Global Styles & Dark Theme === */
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #1a1a1a; /* Um pouco mais suave que o preto total */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,56 +19,129 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  justify-content: center;
   min-height: 100vh;
+  background: #1a1a1a;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* === App Layout === */
+#root {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
 }
 
-button {
+header {
+  text-align: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #e0e0e0;
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #9e9e9e;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* === Component Styling === */
+.component-box {
+  background: #242424;
+  border: 1px solid #3a3a3a;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.component-box:hover {
+  border-color: #535bf2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.component-box h2 {
+  font-size: 1.8em;
+  color: #61dafb; /* React Blue */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.component-box p {
+  color: #bdbdbd;
+  margin-bottom: 1rem;
+}
+
+/* === Code Blocks === */
+.code-block {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  margin-bottom: 1rem;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.95em;
+  overflow-x: auto; /* Adiciona scroll horizontal em vez de quebrar o texto */
+  color: #d4d4d4;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 600px) {
+  #root {
+    padding: 1rem; /* Reduz o padding em telas pequenas */
   }
-  a:hover {
-    color: #747bff;
+
+  header h1 {
+    font-size: 2em; /* Reduz o tamanho do título principal */
   }
-  button {
-    background-color: #f9f9f9;
+
+  .component-box h2 {
+    font-size: 1.5em; /* Reduz o tamanho dos títulos dos componentes */
   }
+}
+
+.code-block strong {
+  color: #9cdcfe;
+  font-weight: 600;
+}
+
+/* === Results & Lists === */
+.results-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.results-list li {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+.results-list li strong {
+  color: #569cd6;
+}
+
+.results-list code {
+  color: #ce9178;
 }

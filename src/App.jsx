@@ -5,8 +5,8 @@ import Desestruturacao from './componentes/Desestruturacao';
 import Funcoes_Atribuidas_Varivaveis from './componentes/Funcoes_Atribuidas_Varivaveis';
 import Import_Export from './componentes/Import_Export';
 import Operador_Ternario from './componentes/Operador_Ternario';
-import TernaryOperator from './componentes/Operador_Ternario';
 import Template_Literals from './componentes/Template_Literals';
+import Orientacao_Objetos from './componentes/Orientacao_Objetos';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Arrow_Function />
         <Import_Export />
         <Callbacks />
-        {/* Para seu próximo exemplo (Desestruturação), crie um novo componente e adicione ele aqui */}
+        <Orientacao_Objetos />
       </main>
     </div>
   )

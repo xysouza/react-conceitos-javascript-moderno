@@ -21,16 +21,16 @@ function Arrow_Function() {
   const mapeadosDepois = numeros.map(n => n * 2);
 
   return (
-    <div style={{ border: '1px solid #ccc', margin: 10, padding: 10 }}>
+    <div className="component-box">
       <h2>Exemplo: Arrow Functions (ES6)</h2>
 
-      <p style={{ marginBottom: 8 }}>
+      <p>
         Forma moderna de escrever funções. Curta, clara e muito usada no React.
       </p>
 
-      <div style={{ background: '#f8f8f8', padding: 8, borderRadius: 6, marginBottom: 10 }}>
+      <div className="code-block">
         <strong>Antes vs Depois</strong>
-        <pre style={{ margin: 0, whiteSpace: 'pre-wrap' }}>
+        <pre>
 {`// Antes (tradicional)
 function somar(a, b) {
   return a + b;
@@ -51,14 +51,14 @@ const f4 = () => ({ a: 1 });       // retornar objeto: use parênteses`}
         </pre>
       </div>
 
-      <ul style={{ listStyle: 'none', paddingLeft: 0, margin: 0 }}>
-        <li style={{ marginBottom: 8 }}>
+      <ul className="results-list">
+        <li>
           Somar (antes vs depois): <strong>{rSomarAntes}</strong> | <strong>{rSomarDepois}</strong>
         </li>
-        <li style={{ marginBottom: 8 }}>
+        <li>
           Dobro (arrow): <strong>{rDobro}</strong>
         </li>
-        <li style={{ marginBottom: 8 }}>
+        <li>
           Retornando objeto: <strong>{JSON.stringify(usuario)}</strong>
         </li>
         <li>

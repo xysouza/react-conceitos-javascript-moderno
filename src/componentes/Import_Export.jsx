@@ -6,7 +6,7 @@ function Import_Export() {
     '// math.js (global)',
     'function somar(a, b) { return a + b; }',
     '',
-    '// app.js (depois de <script src="math.js">)',
+    '// app.js (depois de <script src="math.js">',
     'console.log(somar(2, 3)); // 5',
     '',
     '---------------------------',
@@ -31,21 +31,21 @@ function Import_Export() {
   ].join('\n');
 
   return (
-    <div style={{ border: '1px solid #ccc', margin: 10, padding: 10 }}>
+    <div className="component-box">
       <h2>Import / Export (ES6 Modules)</h2>
 
-      <p style={{ marginBottom: 8 }}>
+      <p>
         Ideia: exporta em um arquivo, importa em outro. Pronto.
       </p>
 
-      <div style={{ background: '#f8f8f8', padding: 8, borderRadius: 6, marginBottom: 10 }}>
+      <div className="code-block">
         <strong>Antes vs Depois</strong>
-        <pre style={{ margin: 0, whiteSpace: 'pre-wrap' }}>{antesDepois}</pre>
+        <pre>{antesDepois}</pre>
       </div>
 
-      <div style={{ background: '#f8f8f8', padding: 8, borderRadius: 6 }}>
+      <div className="code-block">
         <strong>Mais usado no dia a dia</strong>
-        <pre style={{ margin: 0, whiteSpace: 'pre-wrap' }}>{formasComuns}</pre>
+        <pre>{formasComuns}</pre>
       </div>
     </div>
   );

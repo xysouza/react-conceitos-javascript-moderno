@@ -32,26 +32,26 @@ function Callbacks() {
   ].join('\n');
 
   return (
-    <div style={{ border: '1px solid #ccc', margin: 10, padding: 10 }}>
+    <div className="component-box">
       <h2>Exemplo: Callback (função como parâmetro)</h2>
 
-      <p style={{ marginBottom: 8 }}>
+      <p>
         Callback = passar uma função para outra executar.
       </p>
 
-      <div style={{ background: '#f8f8f8', padding: 8, borderRadius: 6, marginBottom: 10 }}>
+      <div className="code-block">
         <strong>Código (curto)</strong>
-        <pre style={{ margin: 0, whiteSpace: 'pre-wrap' }}>{codigo}</pre>
+        <pre>{codigo}</pre>
       </div>
 
-      <div style={{ background: '#f8f8f8', padding: 8, borderRadius: 6, marginBottom: 10 }}>
+      <div className="code-block">
         <strong>Saída esperada</strong>
-        <pre style={{ margin: 0, whiteSpace: 'pre-wrap' }}>{saida}</pre>
+        <pre>{saida}</pre>
       </div>
 
-      <div style={{ background: '#f8f8f8', padding: 8, borderRadius: 6 }}>
+      <div className="code-block">
         <strong>Antes vs Depois (formato do callback)</strong>
-        <pre style={{ margin: 0, whiteSpace: 'pre-wrap' }}>{antesDepois}</pre>
+        <pre>{antesDepois}</pre>
       </div>
     </div>
   );
